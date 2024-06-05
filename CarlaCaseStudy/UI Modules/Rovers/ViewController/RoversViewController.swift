@@ -7,15 +7,23 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class RoversViewController: UIViewController {
 
     var rovers: [Rover] = []
     var photos: [Photo] = []
 
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var topChooseLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         fetchRoverTest()
         fetchRoverDetailTest()
+        setupChooseLabel()
+    }
+    
+    func setupChooseLabel() {
+        topChooseLabel.setInterFont(.regular, size: 14)
     }
     
     func fetchRoverTest() {
