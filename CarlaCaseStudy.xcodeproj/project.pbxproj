@@ -13,6 +13,8 @@
 		FF5C53C52C105A4E003CBA35 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = FF5C53C42C105A4E003CBA35 /* Base */; };
 		FF5C53C72C105A51003CBA35 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF5C53C62C105A51003CBA35 /* Assets.xcassets */; };
 		FF5C53CA2C105A51003CBA35 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = FF5C53C92C105A51003CBA35 /* Base */; };
+		FF5C53E02C107B27003CBA35 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = FF5C53DF2C107B27003CBA35 /* Alamofire */; };
+		FF5C53E32C107B3F003CBA35 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = FF5C53E22C107B3F003CBA35 /* SDWebImage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +33,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF5C53E32C107B3F003CBA35 /* SDWebImage in Frameworks */,
+				FF5C53E02C107B27003CBA35 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,15 +60,119 @@
 		FF5C53BC2C105A4E003CBA35 /* CarlaCaseStudy */ = {
 			isa = PBXGroup;
 			children = (
-				FF5C53BD2C105A4E003CBA35 /* AppDelegate.swift */,
-				FF5C53BF2C105A4E003CBA35 /* SceneDelegate.swift */,
-				FF5C53C12C105A4E003CBA35 /* ViewController.swift */,
-				FF5C53C32C105A4E003CBA35 /* Main.storyboard */,
-				FF5C53C62C105A51003CBA35 /* Assets.xcassets */,
-				FF5C53C82C105A51003CBA35 /* LaunchScreen.storyboard */,
-				FF5C53CB2C105A51003CBA35 /* Info.plist */,
+				FF5C53D62C106C74003CBA35 /* UI Modules */,
+				FF5C53D52C106C64003CBA35 /* Managers */,
+				FF5C53D42C106C5E003CBA35 /* Models */,
+				FF5C53D32C106C48003CBA35 /* Resources */,
+				FF5C53D22C106C2E003CBA35 /* Utilities */,
+				FF5C53D12C106C22003CBA35 /* Extensions */,
 			);
 			path = CarlaCaseStudy;
+			sourceTree = "<group>";
+		};
+		FF5C53D12C106C22003CBA35 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		FF5C53D22C106C2E003CBA35 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				FF5C53BD2C105A4E003CBA35 /* AppDelegate.swift */,
+				FF5C53BF2C105A4E003CBA35 /* SceneDelegate.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		FF5C53D32C106C48003CBA35 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FF5C53C62C105A51003CBA35 /* Assets.xcassets */,
+				FF5C53CB2C105A51003CBA35 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		FF5C53D42C106C5E003CBA35 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FF5C53D52C106C64003CBA35 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		FF5C53D62C106C74003CBA35 /* UI Modules */ = {
+			isa = PBXGroup;
+			children = (
+				FF5C53DD2C1078CD003CBA35 /* Launch */,
+				FF5C53D82C107801003CBA35 /* Detail */,
+				FF5C53D72C1077EB003CBA35 /* Rovers */,
+			);
+			path = "UI Modules";
+			sourceTree = "<group>";
+		};
+		FF5C53D72C1077EB003CBA35 /* Rovers */ = {
+			isa = PBXGroup;
+			children = (
+				FF5C53C32C105A4E003CBA35 /* Main.storyboard */,
+				FF5C53DC2C107898003CBA35 /* ViewModel */,
+				FF5C53DB2C107891003CBA35 /* ViewController */,
+			);
+			path = Rovers;
+			sourceTree = "<group>";
+		};
+		FF5C53D82C107801003CBA35 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				FF5C53DA2C10788A003CBA35 /* ViewModel */,
+				FF5C53D92C107871003CBA35 /* ViewController */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		FF5C53D92C107871003CBA35 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		FF5C53DA2C10788A003CBA35 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FF5C53DB2C107891003CBA35 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				FF5C53C12C105A4E003CBA35 /* ViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		FF5C53DC2C107898003CBA35 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FF5C53DD2C1078CD003CBA35 /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				FF5C53C82C105A51003CBA35 /* LaunchScreen.storyboard */,
+			);
+			path = Launch;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +191,10 @@
 			dependencies = (
 			);
 			name = CarlaCaseStudy;
+			packageProductDependencies = (
+				FF5C53DF2C107B27003CBA35 /* Alamofire */,
+				FF5C53E22C107B3F003CBA35 /* SDWebImage */,
+			);
 			productName = CarlaCaseStudy;
 			productReference = FF5C53BA2C105A4E003CBA35 /* CarlaCaseStudy.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +223,10 @@
 				Base,
 			);
 			mainGroup = FF5C53B12C105A4E003CBA35;
+			packageReferences = (
+				FF5C53DE2C107B27003CBA35 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				FF5C53E12C107B3F003CBA35 /* XCRemoteSwiftPackageReference "SDWebImage" */,
+			);
 			productRefGroup = FF5C53BB2C105A4E003CBA35 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -294,7 +410,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7DKZH9VMX9;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = CarlaCaseStudy/Info.plist;
+				INFOPLIST_FILE = CarlaCaseStudy/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -323,7 +439,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7DKZH9VMX9;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = CarlaCaseStudy/Info.plist;
+				INFOPLIST_FILE = CarlaCaseStudy/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -365,6 +481,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FF5C53DE2C107B27003CBA35 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.9.1;
+			};
+		};
+		FF5C53E12C107B3F003CBA35 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.19.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FF5C53DF2C107B27003CBA35 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FF5C53DE2C107B27003CBA35 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		FF5C53E22C107B3F003CBA35 /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FF5C53E12C107B3F003CBA35 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FF5C53B22C105A4E003CBA35 /* Project object */;
 }
