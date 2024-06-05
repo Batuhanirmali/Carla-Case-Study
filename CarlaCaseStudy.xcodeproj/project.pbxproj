@@ -15,6 +15,10 @@
 		FF5C53CA2C105A51003CBA35 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = FF5C53C92C105A51003CBA35 /* Base */; };
 		FF5C53E02C107B27003CBA35 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = FF5C53DF2C107B27003CBA35 /* Alamofire */; };
 		FF5C53E32C107B3F003CBA35 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = FF5C53E22C107B3F003CBA35 /* SDWebImage */; };
+		FFC272C72C10863800FEBA58 /* Rover.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC272C62C10863800FEBA58 /* Rover.swift */; };
+		FFC272C92C10865F00FEBA58 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC272C82C10865F00FEBA58 /* NetworkManager.swift */; };
+		FFC272CB2C10892800FEBA58 /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC272CA2C10892800FEBA58 /* Camera.swift */; };
+		FFC272CD2C108A6F00FEBA58 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC272CC2C108A6F00FEBA58 /* Photo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,10 @@
 		FF5C53C62C105A51003CBA35 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FF5C53C92C105A51003CBA35 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FF5C53CB2C105A51003CBA35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FFC272C62C10863800FEBA58 /* Rover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rover.swift; sourceTree = "<group>"; };
+		FFC272C82C10865F00FEBA58 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		FFC272CA2C10892800FEBA58 /* Camera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
+		FFC272CC2C108A6F00FEBA58 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +106,9 @@
 		FF5C53D42C106C5E003CBA35 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				FFC272C62C10863800FEBA58 /* Rover.swift */,
+				FFC272CA2C10892800FEBA58 /* Camera.swift */,
+				FFC272CC2C108A6F00FEBA58 /* Photo.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -105,6 +116,7 @@
 		FF5C53D52C106C64003CBA35 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				FFC272C82C10865F00FEBA58 /* NetworkManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -254,7 +266,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFC272CD2C108A6F00FEBA58 /* Photo.swift in Sources */,
+				FFC272CB2C10892800FEBA58 /* Camera.swift in Sources */,
+				FFC272C72C10863800FEBA58 /* Rover.swift in Sources */,
 				FF5C53C22C105A4E003CBA35 /* ViewController.swift in Sources */,
+				FFC272C92C10865F00FEBA58 /* NetworkManager.swift in Sources */,
 				FF5C53BE2C105A4E003CBA35 /* AppDelegate.swift in Sources */,
 				FF5C53C02C105A4E003CBA35 /* SceneDelegate.swift in Sources */,
 			);
