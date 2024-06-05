@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		FF5C53BE2C105A4E003CBA35 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5C53BD2C105A4E003CBA35 /* AppDelegate.swift */; };
 		FF5C53C02C105A4E003CBA35 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5C53BF2C105A4E003CBA35 /* SceneDelegate.swift */; };
-		FF5C53C22C105A4E003CBA35 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5C53C12C105A4E003CBA35 /* ViewController.swift */; };
+		FF5C53C22C105A4E003CBA35 /* RoversViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5C53C12C105A4E003CBA35 /* RoversViewController.swift */; };
 		FF5C53C52C105A4E003CBA35 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = FF5C53C42C105A4E003CBA35 /* Base */; };
 		FF5C53C72C105A51003CBA35 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF5C53C62C105A51003CBA35 /* Assets.xcassets */; };
 		FF5C53CA2C105A51003CBA35 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = FF5C53C92C105A51003CBA35 /* Base */; };
@@ -19,13 +19,21 @@
 		FFC272C92C10865F00FEBA58 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC272C82C10865F00FEBA58 /* NetworkManager.swift */; };
 		FFC272CB2C10892800FEBA58 /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC272CA2C10892800FEBA58 /* Camera.swift */; };
 		FFC272CD2C108A6F00FEBA58 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC272CC2C108A6F00FEBA58 /* Photo.swift */; };
+		FFC272D12C10962D00FEBA58 /* RoversTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC272CF2C10962D00FEBA58 /* RoversTableViewCell.swift */; };
+		FFC272D22C10962D00FEBA58 /* RoversTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFC272D02C10962D00FEBA58 /* RoversTableViewCell.xib */; };
+		FFC272D52C1099F600FEBA58 /* Inter-VariableFont_slnt,wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FFC272D42C1099F600FEBA58 /* Inter-VariableFont_slnt,wght.ttf */; };
+		FFC272D72C109D2000FEBA58 /* UIFont+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC272D62C109D2000FEBA58 /* UIFont+Extensions.swift */; };
+		FFC272D92C109D3200FEBA58 /* UILabel+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC272D82C109D3200FEBA58 /* UILabel+Extensions.swift */; };
+		FFC272DB2C10A97F00FEBA58 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC272DA2C10A97F00FEBA58 /* UIView+Extensions.swift */; };
+		FFC272DD2C10A99F00FEBA58 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC272DC2C10A99F00FEBA58 /* UIImageView.swift */; };
+		FFC272DF2C10AE7200FEBA58 /* Quicksand-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FFC272DE2C10AE7200FEBA58 /* Quicksand-VariableFont_wght.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FF5C53BA2C105A4E003CBA35 /* CarlaCaseStudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarlaCaseStudy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF5C53BD2C105A4E003CBA35 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FF5C53BF2C105A4E003CBA35 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FF5C53C12C105A4E003CBA35 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FF5C53C12C105A4E003CBA35 /* RoversViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoversViewController.swift; sourceTree = "<group>"; };
 		FF5C53C42C105A4E003CBA35 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FF5C53C62C105A51003CBA35 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FF5C53C92C105A51003CBA35 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -34,6 +42,14 @@
 		FFC272C82C10865F00FEBA58 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		FFC272CA2C10892800FEBA58 /* Camera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
 		FFC272CC2C108A6F00FEBA58 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		FFC272CF2C10962D00FEBA58 /* RoversTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoversTableViewCell.swift; sourceTree = "<group>"; };
+		FFC272D02C10962D00FEBA58 /* RoversTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RoversTableViewCell.xib; sourceTree = "<group>"; };
+		FFC272D42C1099F600FEBA58 /* Inter-VariableFont_slnt,wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-VariableFont_slnt,wght.ttf"; sourceTree = "<group>"; };
+		FFC272D62C109D2000FEBA58 /* UIFont+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extensions.swift"; sourceTree = "<group>"; };
+		FFC272D82C109D3200FEBA58 /* UILabel+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extensions.swift"; sourceTree = "<group>"; };
+		FFC272DA2C10A97F00FEBA58 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		FFC272DC2C10A99F00FEBA58 /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
+		FFC272DE2C10AE7200FEBA58 /* Quicksand-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-VariableFont_wght.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +97,10 @@
 		FF5C53D12C106C22003CBA35 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				FFC272D62C109D2000FEBA58 /* UIFont+Extensions.swift */,
+				FFC272D82C109D3200FEBA58 /* UILabel+Extensions.swift */,
+				FFC272DA2C10A97F00FEBA58 /* UIView+Extensions.swift */,
+				FFC272DC2C10A99F00FEBA58 /* UIImageView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -97,6 +117,7 @@
 		FF5C53D32C106C48003CBA35 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				FFC272D32C1099E800FEBA58 /* Font */,
 				FF5C53C62C105A51003CBA35 /* Assets.xcassets */,
 				FF5C53CB2C105A51003CBA35 /* Info.plist */,
 			);
@@ -124,6 +145,7 @@
 		FF5C53D62C106C74003CBA35 /* UI Modules */ = {
 			isa = PBXGroup;
 			children = (
+				FF5C53C32C105A4E003CBA35 /* Main.storyboard */,
 				FF5C53DD2C1078CD003CBA35 /* Launch */,
 				FF5C53D82C107801003CBA35 /* Detail */,
 				FF5C53D72C1077EB003CBA35 /* Rovers */,
@@ -134,7 +156,7 @@
 		FF5C53D72C1077EB003CBA35 /* Rovers */ = {
 			isa = PBXGroup;
 			children = (
-				FF5C53C32C105A4E003CBA35 /* Main.storyboard */,
+				FFC272CE2C10961100FEBA58 /* TableViewCell */,
 				FF5C53DC2C107898003CBA35 /* ViewModel */,
 				FF5C53DB2C107891003CBA35 /* ViewController */,
 			);
@@ -167,7 +189,7 @@
 		FF5C53DB2C107891003CBA35 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				FF5C53C12C105A4E003CBA35 /* ViewController.swift */,
+				FF5C53C12C105A4E003CBA35 /* RoversViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -185,6 +207,24 @@
 				FF5C53C82C105A51003CBA35 /* LaunchScreen.storyboard */,
 			);
 			path = Launch;
+			sourceTree = "<group>";
+		};
+		FFC272CE2C10961100FEBA58 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				FFC272CF2C10962D00FEBA58 /* RoversTableViewCell.swift */,
+				FFC272D02C10962D00FEBA58 /* RoversTableViewCell.xib */,
+			);
+			path = TableViewCell;
+			sourceTree = "<group>";
+		};
+		FFC272D32C1099E800FEBA58 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				FFC272DE2C10AE7200FEBA58 /* Quicksand-VariableFont_wght.ttf */,
+				FFC272D42C1099F600FEBA58 /* Inter-VariableFont_slnt,wght.ttf */,
+			);
+			path = Font;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -253,6 +293,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFC272D22C10962D00FEBA58 /* RoversTableViewCell.xib in Resources */,
+				FFC272DF2C10AE7200FEBA58 /* Quicksand-VariableFont_wght.ttf in Resources */,
+				FFC272D52C1099F600FEBA58 /* Inter-VariableFont_slnt,wght.ttf in Resources */,
 				FF5C53C72C105A51003CBA35 /* Assets.xcassets in Resources */,
 				FF5C53CA2C105A51003CBA35 /* Base in Resources */,
 				FF5C53C52C105A4E003CBA35 /* Base in Resources */,
@@ -266,13 +309,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFC272D12C10962D00FEBA58 /* RoversTableViewCell.swift in Sources */,
 				FFC272CD2C108A6F00FEBA58 /* Photo.swift in Sources */,
 				FFC272CB2C10892800FEBA58 /* Camera.swift in Sources */,
 				FFC272C72C10863800FEBA58 /* Rover.swift in Sources */,
-				FF5C53C22C105A4E003CBA35 /* ViewController.swift in Sources */,
+				FFC272DD2C10A99F00FEBA58 /* UIImageView.swift in Sources */,
+				FF5C53C22C105A4E003CBA35 /* RoversViewController.swift in Sources */,
 				FFC272C92C10865F00FEBA58 /* NetworkManager.swift in Sources */,
+				FFC272D92C109D3200FEBA58 /* UILabel+Extensions.swift in Sources */,
 				FF5C53BE2C105A4E003CBA35 /* AppDelegate.swift in Sources */,
+				FFC272D72C109D2000FEBA58 /* UIFont+Extensions.swift in Sources */,
 				FF5C53C02C105A4E003CBA35 /* SceneDelegate.swift in Sources */,
+				FFC272DB2C10A97F00FEBA58 /* UIView+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
