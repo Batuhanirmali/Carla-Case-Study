@@ -8,47 +8,105 @@
 import UIKit
 
 class RoversViewController: UIViewController {
-
-    var rovers: [Rover] = []
-    var photos: [Photo] = []
+    
+    private let viewModel = RoversViewModel()
+    var loadingIndicator = UIActivityIndicatorView(style: .medium)
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var topChooseLabel: UILabel!
+    @IBOutlet weak var topChooseView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        fetchRoverTest()
-        fetchRoverDetailTest()
         setupChooseLabel()
+        setupTableView()
+        setupLoadingIndicator()
+        bindViewModel()
+        startLoading()
+        viewModel.fetchRovers()
     }
     
     func setupChooseLabel() {
         topChooseLabel.setInterFont(.regular, size: 14)
     }
     
-    func fetchRoverTest() {
-        NetworkManager.shared.fetchRovers { result in
-            switch result {
-            case .success(let rovers):
-                self.rovers = rovers
-                print(rovers)
-            case .failure(let error):
-                print("Failed to fetch rovers: \(error.localizedDescription)")
+    func setupTableView() {
+        tableView.dataSource = self
+        tableView.delegate = self
+        tableView.register(UINib(nibName: "RoversTableViewCell", bundle: nil), forCellReuseIdentifier: "RoversTableViewCell")
+        tableView.tableHeaderView = topChooseView
+    }
+    
+    func setupLoadingIndicator() {
+        loadingIndicator.center = view.center
+        loadingIndicator.hidesWhenStopped = true
+        view.addSubview(loadingIndicator)
+    }
+    
+    func bindViewModel() {
+        viewModel.onRoversFetched = { [weak self] in
+            DispatchQueue.main.async {
+                self?.stopLoading()
+                self?.tableView.reloadData()
+            }
+        }
+        
+        viewModel.onError = { [weak self] errorMessage in
+            DispatchQueue.main.async {
+                self?.stopLoading()
+                print(errorMessage)
             }
         }
     }
-
-    func fetchRoverDetailTest() {
-        NetworkManager.shared.fetchLatestPhotos(for: "Curiosity") { result in
-            switch result {
-            case .success(let photos):
-                self.photos = photos
-                print(photos)
-            case .failure(let error):
-                print("Failed to fetch rovers: \(error.localizedDescription)")
-            }
-        }
+    
+    func startLoading() {
+        loadingIndicator.startAnimating()
+        tableView.isHidden = true
     }
-
+    
+    func stopLoading() {
+        loadingIndicator.stopAnimating()
+        tableView.isHidden = false
+    }
 }
 
+extension RoversViewController: UITableViewDataSource, UITableViewDelegate {
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return viewModel.rovers.count
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "RoversTableViewCell", for: indexPath) as? RoversTableViewCell else {
+            return UITableViewCell()
+        }
+        
+        let rover = viewModel.rovers[indexPath.section]
+        let photoUrl = viewModel.latestPhotoUrls[rover.name]
+        cell.configure(with: rover, photoUrl: photoUrl)
+        cell.selectionStyle = .none
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 120
+    }
+    
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 18
+    }
+
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        let footerView = UIView()
+        footerView.backgroundColor = .clear
+        return footerView
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+}
