@@ -10,7 +10,7 @@ import UIKit
 class RoversViewController: UIViewController {
     
     private let viewModel = RoversViewModel()
-    var loadingIndicator = UIActivityIndicatorView(style: .medium)
+    private let loadingIndicator = UIActivityIndicatorView(style: .medium)
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var topChooseLabel: UILabel!
@@ -92,6 +92,21 @@ extension RoversViewController: UITableViewDataSource, UITableViewDelegate {
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        let selectedRover = viewModel.rovers[indexPath.section]
+        navigateToRoverDetail(roverName: selectedRover.name)
+    }
+    
+    private func navigateToRoverDetail(roverName: String) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        if let detailVC = storyboard.instantiateViewController(withIdentifier: "RoversDetailViewController") as? RoversDetailViewController {
+            let viewModel = RoversDetailViewModel(roverName: roverName)
+            detailVC.viewModel = viewModel
+            navigationController?.pushViewController(detailVC, animated: true)
+        }
+    }
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 120
     }
@@ -105,8 +120,5 @@ extension RoversViewController: UITableViewDataSource, UITableViewDelegate {
         footerView.backgroundColor = .clear
         return footerView
     }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
-    }
 }
+

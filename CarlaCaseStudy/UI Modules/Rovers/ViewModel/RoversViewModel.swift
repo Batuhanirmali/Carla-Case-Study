@@ -20,33 +20,35 @@ class RoversViewModel {
             switch result {
             case .success(let rovers):
                 self.rovers = rovers
-                self.fetchLatestPhotosForRovers()
+                self.setCustomPhotoUrlsForRovers()
             case .failure(let error):
                 self.onError?("Failed to fetch rovers: \(error.localizedDescription)")
             }
         }
     }
     
-    private func fetchLatestPhotosForRovers() {
-        let group = DispatchGroup()
-        
+    private func setCustomPhotoUrlsForRovers() {
         for rover in rovers {
-            group.enter()
-            NetworkManager.shared.fetchLatestPhotos(for: rover.name) { result in
-                switch result {
-                case .success(let photos):
-                    if let latestPhoto = photos.last {
-                        self.latestPhotoUrls[rover.name] = latestPhoto.imgSrc
-                    }
-                case .failure(let error):
-                    self.onError?("Failed to fetch latest photos for rover \(rover.name): \(error.localizedDescription)")
-                }
-                group.leave()
+            if let photoUrl = NetworkManager.shared.fetchImageURL(for: rover.name) {
+                self.latestPhotoUrls[rover.name] = photoUrl
+            } else {
+                self.fetchLatestPhotos(for: rover.name)
             }
         }
-        
-        group.notify(queue: .main) {
-            self.onRoversFetched?()
+        self.onRoversFetched?()
+    }
+    
+    private func fetchLatestPhotos(for roverName: String) {
+        NetworkManager.shared.fetchLatestPhotos(for: roverName) { result in
+            switch result {
+            case .success(let photos):
+                if let latestPhoto = photos.last {
+                    self.latestPhotoUrls[roverName] = latestPhoto.imgSrc
+                }
+            case .failure(let error):
+                self.onError?("Failed to fetch latest photos for rover \(roverName): \(error.localizedDescription)")
+            }
         }
     }
 }
+

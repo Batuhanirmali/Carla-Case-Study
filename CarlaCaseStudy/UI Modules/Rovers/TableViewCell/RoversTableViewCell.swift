@@ -55,8 +55,8 @@ class RoversTableViewCell: UITableViewCell {
     
     func configure(with rover: Rover, photoUrl: String?) {
         cellNameLabel.text = rover.name
-        cellLandingDateLabel.text = rover.landingDate
-        cellLaunchDateLabel.text = rover.launchDate
+        cellLandingDateLabel.text = rover.landingDate.formattedDate()
+        cellLaunchDateLabel.text = rover.launchDate.formattedDate()
         
         let status = rover.status.capitalized
         cellStatusLabel.text = status

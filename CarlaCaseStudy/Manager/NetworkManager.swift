@@ -38,4 +38,21 @@ class NetworkManager {
         }
     }
     
+    //MARK: I searched a lot for the URLs of these images in Api but I couldn't find them, so I put them with fixed url.
+
+    func fetchImageURL(for roverName: String) -> String? {
+        switch roverName {
+        case "Perseverance":
+            return "https://mars-photos.herokuapp.com/explore/images/Perseverance_rover.jpg"
+        case "Opportunity":
+            return "https://mars-photos.herokuapp.com/explore/images/Opportunity_rover.jpg"
+        case "Curiosity":
+            return "https://mars-photos.herokuapp.com/explore/images/Curiosity_rover.jpg"
+        case "Spirit":
+            return "https://mars-photos.herokuapp.com/explore/images/Spirit_rover.jpg"
+        default:
+            return nil
+        }
+    }
 }
+
