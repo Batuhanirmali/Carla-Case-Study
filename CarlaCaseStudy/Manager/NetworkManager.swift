@@ -7,11 +7,16 @@
 
 import Alamofire
 
+protocol NetworkManagerProtocol {
+    func fetchRovers(completion: @escaping (Result<[Rover], Error>) -> Void)
+    func fetchLatestPhotos(for roverName: String, completion: @escaping (Result<[Photo], Error>) -> Void)
+    func fetchImageURL(for roverName: String) -> String?
+}
+
 class NetworkManager {
     
     static let shared = NetworkManager()
     private let baseURL = "https://mars-photos.herokuapp.com/api/v1/rovers"
-    
     private init() {}
     
     func fetchRovers(completion: @escaping (Result<[Rover], Error>) -> Void) {

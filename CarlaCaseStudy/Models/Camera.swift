@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Camera: Codable {
+struct Camera: Codable, Equatable {
     let name: String
     let fullName: String
     

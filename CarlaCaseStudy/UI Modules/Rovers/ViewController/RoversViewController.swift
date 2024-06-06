@@ -9,8 +9,8 @@ import UIKit
 
 class RoversViewController: UIViewController {
     
-    private let viewModel = RoversViewModel()
-    private let loadingIndicator = UIActivityIndicatorView(style: .medium)
+    var viewModel = RoversViewModel()
+    let loadingIndicator = UIActivityIndicatorView(style: .medium)
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var topChooseLabel: UILabel!

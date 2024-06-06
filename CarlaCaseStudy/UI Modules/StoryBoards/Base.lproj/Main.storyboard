@@ -12,7 +12,7 @@
         <!--Rovers-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="RoversViewController" customModule="CarlaCaseStudy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RoversViewController" id="BYZ-38-t0r" customClass="RoversViewController" customModule="CarlaCaseStudy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -163,8 +163,8 @@
         <!--Image Page View Controller-->
         <scene sceneID="BjL-kR-0Gl">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="C9h-Tk-6cV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <pageViewController storyboardIdentifier="ImagePageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="rXU-qi-maR" customClass="ImagePageViewController" customModule="CarlaCaseStudy" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="C9h-Tk-6cV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3430" y="-35"/>
         </scene>
